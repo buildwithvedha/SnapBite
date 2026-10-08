@@ -79,7 +79,7 @@ def ask_gemini(parts):
 #step 1: onboarding (username and phone)
 
 if 'onboarded' not in st.session_state:
-    st.title("MacroSnap 🥗")
+    st.title("SnapBite 🥗")
     st.caption("Snap a meal, estimate calories, and track macros in seconds.")
 
     with st.form("onboarding_form"): 
@@ -87,7 +87,7 @@ if 'onboarded' not in st.session_state:
         whatsapp_number = st.text_input(
             "WhatsApp number (with country code)",
             placeholder="+91XXXXXXXXXX",
-            help="This is the number Macrosnap will text you."
+            help="This is the number SnapBite will text you."
         )
         submitted = st.form_submit_button("Let's go 🚀")
 
@@ -112,7 +112,7 @@ if 'onboarded' not in st.session_state:
 header_col, button_col = st.columns([5, 2], vertical_alignment="center")
  
 with header_col:
-    st.title("🥗 MacroSnap")
+    st.title("🥗 SnapBite")
  
 with button_col:
     send_disabled = len(st.session_state.messages) <= 2
